@@ -1,0 +1,144 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>心科技APP</title>
+    <style>
+        @font-face {
+            font-family: 'PingFang';
+            /*src: url('./typeface/PingFang-Jian-ChangGuiTi-2.ttf');*/
+        }
+
+        body {
+            font-family: 'PingFang';
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            background: url('https://gitee.com/tl4423/img/raw/master/img/944090.jpg') no-repeat;
+            color: white;
+        }
+
+        .row1 {
+            height: 300px;
+            margin-bottom: 3.5%;
+        }
+
+        .col1 {
+            /*边框宽度,边框宽度调整完毕之后一定要调整边框内文字边距，分别是82、87行的margin-right*/
+            max-width: 230px;
+            height: 48px;
+            border: 1px solid white;
+            border-radius: 15px;
+
+            /*iphone和安卓边框的底部边距*/
+            margin-bottom: 2%;
+            padding-top: 1%
+        }
+
+        .img-One {
+            border-radius: 25px;
+        }
+
+        a {
+            
+            color: white;
+        }
+        a:hover{
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @media screen and (max-width:500px){
+            .h6{
+                font-size: 13px;
+            }
+            .row1{
+                height: 240px;
+                margin-top: -10%;
+            }
+            .col1{
+                padding-top: 13px;
+            }
+            body{
+                background-size: 300% 190%;
+            }
+        }
+         @media screen and (max-width:1025px){
+             body{
+                background-size: 300% 250%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" style='background: rgb(102, 102, 102, 0.5);'>
+        <div class="row" style='padding: 10.875px 0px 10.875px 0px;'>
+              <img src="https://gitee.com/tl4423/img/raw/master/img/b6947a.png" alt="" class='img-fluid' style='max-width: 40%;max-height:30px;margin-left: 10%;'>
+        </div>
+      </div>
+    <div class="container">
+        <div class="row row1 justify-content-center">
+            <div class="col align-self-end">
+                <img src="https://gitee.com/tl4423/img/raw/master/img/33f752.png" class="img-One img-fluid d-block mx-auto" alt="" width="130px">
+            </div>
+        </div>
+        <div class="row row2 justify-content-center">
+            <a href='https://kzxnsx.lanzous.com/iqEfVophksj' class="col col1">
+                <img src="./image/ios.png" class="img-One-1 img-fluid" alt="" style="margin-right: 25%;"><span>IOS版本</span>
+            </a>
+        </div>
+        <div class="row row2 justify-content-center">
+            <a href='https://kzxnsx.lanzous.com/iOvJLoqet4h' class="col col1">
+                <img src="./image/android.png" class="img-One-1 img-fluid" alt="" style="margin-right: 25%;"><span>安卓版本</span>
+            </a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col" style='max-width:330px;text-align: center;'>
+                <h6>请勿使用QQ浏览器下载，其他浏览器均可</h6>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col">
+                <img src="https://gitee.com/tl4423/img/raw/master/img/7a5939.png" class="img-Two img-fluid d-block mx-auto m-3" alt="" width="130px">
+            </div>
+        </div>
+        <div class="navbar navbar-expand-lg fixed-bottom justify-content-center" style='background: rgb(102, 102, 102, 0.5);padding-top:12px;white-space: nowrap'>
+                    <h6 class='h6'>QQ群:emmm&nbsp;&nbsp;&nbsp;联系邮箱:840263997@qq.com</h6>
+          </div>
+    </div>
+</body>
+<script>
+window.onload = function () {
+    if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        const col1 = document.getElementsByClassName('col1')[0]
+        const col2 = document.getElementsByClassName('col1')[1]
+        const h6 = document.getElementsByTagName('h6')[0]
+        let newCol1Style = col1.style.marginLeft = '-17%';
+        let newCol2Style = col2.style.marginLeft = '-17%';
+        let newH6Style = h6.style.marginLeft = '-95%';
+    }else {
+        console.log('false')   
+    }
+}
+
+
+
+/*function isIE() { //ie?
+ if (!!window.ActiveXObject || "ActiveXObject" in window)
+  return true;
+  else
+  return false;
+ }*/
+</script>
+</html>
