@@ -1,0 +1,47 @@
+{
+  "name": "g0f.cn",
+  "version": "v3.0.4",
+  "description": "g0f.cn hugo blog",
+  "private": true,
+  "scripts": {
+    "hugo": "hugo --cleanDestinationDir --forceSyncStatic --gc --ignoreCache --minify --enableGitInfo --templateMetrics --templateMetricsHints",
+    "server": "git submodule update --remote --merge && start http://192.168.0.5:1313 && hugo server -w -D -p 1313 --bind 0.0.0.0 --contentDir example --minify --forceSyncStatic --ignoreCache --noHTTPCache --disableFastRender -e production --enableGitInfo --disableKinds RSS --printUnusedTemplates --templateMetrics --templateMetricsHints",
+    "new": "node scripts/post_title_prompt.js && bash scripts/format_filename.sh",
+    "preview": "git submodule update --remote --merge && start http://192.168.0.5:1313 && hugo server -w -D -p 1313 --bind 0.0.0.0 --contentDir content --minify --forceSyncStatic --ignoreCache --noHTTPCache --disableFastRender -e production --enableGitInfo --templateMetrics --templateMetricsHints",
+    "update": "git submodule update --remote --merge",
+    "theme": "git submodule update --init --recursive",
+    "start": "next start",
+    "dev": "next dev",
+    "lint": "next lint",
+    "build": "next build",
+    "changelog": "changelog --allow-unknown",
+    "vercel": "node scripts/hugo_version.js &&  hugo --cleanDestinationDir --forceSyncStatic --gc --ignoreCache --minify --enableGitInfo && next build",
+    "uncss": "uncss -n layouts/index.html > static/assets/chromedev/css/dist/chrome.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xinkeji/hugo"
+  },
+  "keywords": [
+    "hugo",
+    "theme",
+    "blog",
+    "eallion"
+  ],
+  "author": "Charles Chin",
+  "license": "GLWTPL",
+  "bugs": {
+    "url": "https://github.com/xinkeji/hugo/issues"
+  },
+  "homepage": "https://github.com/xinkeji/hugo#readme",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "fs": "0.0.1-security",
+    "generate-changelog": "^1.8.0",
+    "next": "13.5.6",
+    "next.js": "^1.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "uncss": "^0.17.3"
+  }
+}
